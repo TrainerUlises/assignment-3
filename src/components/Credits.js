@@ -67,7 +67,7 @@ function Credits({ credits, addCredit, accountBalance }) {
         <button type="submit">Add Credit</button>
       </form>
 
-      {/* 📜 List of all credit transactions */}
+      {/* Listing all credit transactions */}
       <h2>Credit Transactions</h2>
       <ul style={{ listStyle: "none", padding: 0 }}>
         {credits.map((credit) => (
