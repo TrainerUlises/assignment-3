@@ -7,7 +7,7 @@ It contains the top-level state.
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-// Import other components
+// Import all other components
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
