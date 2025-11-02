@@ -7,23 +7,23 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Credits({ credits, addCredit, accountBalance }) {
-  // 🧠 Local state variables to store user input for new credit
+  
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
 
-  // 🧾 Runs when the form is submitted
+  
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the page from reloading
+    e.preventDefault(); 
 
     // Create a new credit object with user input
     const newCredit = {
       id: credits.length + 1,          // Give it a unique ID
       description: description,        // Use the description input
       amount: parseFloat(amount),      // Convert string input to number
-      date: new Date().toISOString(),  // Add the current date
+      date: new Date().toISOString(),  // Adds current date
     };
 
-    // Call addCredit() from App.js to update state
+    // calls addCredit() from App.js 
     addCredit(newCredit);
 
     // Reset input fields back to empty
@@ -31,16 +31,16 @@ function Credits({ credits, addCredit, accountBalance }) {
     setAmount("");
   };
 
-  // 🧩 What shows on the web page (JSX)
+  
   return (
     <div style={{ textAlign: "center" }}>
       <h1>Credits</h1>
 
-      {/* Link back to Home page */}
+      {/* back to home page */ }
       <Link to="/">Home</Link>
       <br /><br />
 
-      {/* Display the current account balance */}
+      {/* displays the current account balance */}
       <h3>Account Balance: {accountBalance.toFixed(2)}</h3>
 
       {/* ✏️ Form for adding a new credit */}
